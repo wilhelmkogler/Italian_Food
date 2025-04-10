@@ -15,10 +15,10 @@ function Story() {
         <h2 className="text-4xl font-bold mb-6 text-center md:text-left">
           Our Story
         </h2>
-        <p className="text-lg mb-4 leading-relaxed">
-          Welcome to La Tavola — where tradition meets taste. Since 1995, we have been serving authentic Italian dishes made with fresh ingredients and love.
+        <p className="text-lg mb-4 leading-relaxed text-justify">
+          Welcome to ITALY — where tradition meets taste. Since 1995, we have been serving authentic Italian dishes made with fresh ingredients and love.
         </p>
-        <p className="text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed text-justify">
           From our handcrafted pizzas to our signature pastas, every bite is a journey to Italy. Enjoy the cozy atmosphere, friendly service, and unforgettable flavors.
         </p>
       </div>
