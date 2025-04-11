@@ -1,6 +1,6 @@
 function GoMenu() {
     return (
-      <section className="text-white py-16 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="text-white font-nicer py-10 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
   
         {/* Szöveg */}
         <div className="flex flex-col items-end w-1/3">

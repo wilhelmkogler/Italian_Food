@@ -2,14 +2,18 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "../public/img/fea1.jpg",
-  "../public/img/fea2.jpg",
-  "../public/img/fea3.jpg",
-  "../public/img/fea2.jpg",
-
+  "/img/fea1.jpg",
+  "/img/fea2.jpg",
+  "/img/fea3.jpg",
 ];
 
-const Gallery = () => {
+const texts = [
+  "HUNGRY?",
+  "COME AND ENJOY A GREAT MEAL!",
+  "OR ORDER DELIVERY!",
+];
+
+const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -18,7 +22,7 @@ const Gallery = () => {
     setTimeout(() => {
       setCurrentIndex(nextIndex);
       setFade(false);
-    }, 300); // animáció ideje (ms)
+    }, 300);
   };
 
   const prevImage = () => {
@@ -32,15 +36,19 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-16 px-4 max-w-6xl mx-auto">
-      <h2 className="text-white text-4xl font-bold text-center mb-12">Gallery</h2>
-
+    <section className="py-6 px-4 mx-auto">
       <div className="relative">
+        {/* Háttér kép blur-ral */}
         <img
           src={images[currentIndex]}
           alt="Restaurant gallery"
-          className={`w-full h-[500px] object-cover rounded-2xl shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}
+          className={`w-full h-[80vh] object-cover rounded-2xl shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'} blur-sm brightness-75`}
         />
+
+        {/* Szöveg középen */}
+        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-fancy text-6xl md:text-7xl font-bold text-center drop-shadow-lg">
+          {texts[currentIndex]}
+        </h2>
 
         {/* Bal nyíl */}
         <button
@@ -62,4 +70,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Hero;

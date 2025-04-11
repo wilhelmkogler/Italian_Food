@@ -21,12 +21,12 @@ const dishes = [
   
   function Featured() {
     return (
-      <section className="py-16 px-4 max-w-6xl mx-auto">
+      <section className="py-10 px-4 max-w-6xl mx-auto font-nicer">
         <h2 className="text-white text-4xl font-bold text-center mb-12">
           Featured Dishes
         </h2>
   
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex justify-center gap-8">
           {dishes.map((dish) => (
             <div
               key={dish.id}
@@ -35,7 +35,7 @@ const dishes = [
               <img src={dish.image} alt={dish.name} className="w-full h-56 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3">{dish.name}</h3>
-                <p className="text-gray-600">{dish.description}</p>
+                <p className="text-gray-600 text-sm">{dish.description}</p>
               </div>
             </div>
           ))}

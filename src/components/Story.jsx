@@ -1,6 +1,6 @@
 function Story() {
   return (
-    <section className="text-white py-16 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <section className="text-white py-10 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
       {/* Kép */}
       <div className="flex-1">
         <img
@@ -11,7 +11,7 @@ function Story() {
       </div>
 
       {/* Szöveg */}
-      <div className="flex-1">
+      <div className="flex-1 font-nicer">
         <h2 className="text-4xl font-bold mb-6 text-center md:text-left">
           Our Story
         </h2>
