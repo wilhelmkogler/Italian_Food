@@ -8,6 +8,6 @@ body{
   
   background: #0d0200;
   background: linear-gradient(180deg,  #0d0200, #1c0c00);
-
+  scroll-behavior: smooth;
 
  }

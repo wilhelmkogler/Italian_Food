@@ -21,17 +21,17 @@ function Header() {
               Home
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/menu" className="relative group">
+            <Link to="#menu" className="relative group">
               Menu
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/" className="relative group">
+            <Link to="/contact" className="relative group">
               Restaurant
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
             <Link
-              to="/"
+              to="/delivery"
               className="bg-zold py-2 px-4 rounded-xl transform transition-all duration-500 ease-in-out hover:bg-white hover:text-black"
             >
               Delivery
