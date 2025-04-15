@@ -29,7 +29,7 @@ function Featured() {
         Popular Dishes
       </h2>
 
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
+      <div className="flex flex-row lg:justify-between gap-8">
         {dishes.map((dish) => (
           <div
             key={dish.id}
@@ -44,9 +44,9 @@ function Featured() {
               />
             </div>
 
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-3">{dish.name}</h3>
-              <p className="text-gray-600 text-sm">{dish.description}</p>
+            <div className="p-4 lg:p-6">
+              <h3 className="text-md lg:text-2xl font-semibold mb-3">{dish.name}</h3>
+              <p className="text-gray-600 text-xs lg:text-sm">{dish.description}</p>
             </div>
           </div>
         ))}

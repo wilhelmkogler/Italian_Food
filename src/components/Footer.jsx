@@ -7,7 +7,7 @@ function Footer() {
         <div>
           <h3 className="text-2xl font-bold text-white mb-5">ITALY</h3>
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} Italiano. All rights reserved.
+            &copy; {new Date().getFullYear()} Italy. All rights reserved.
           </p>
         </div>
 

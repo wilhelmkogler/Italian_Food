@@ -36,17 +36,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-4 pb-10 mx-auto">
+    <section className="pt-2 pb-10 mx-auto">
       <div className="relative">
         {/* Háttér kép blur-ral */}
         <img
           src={images[currentIndex]}
           alt="Restaurant gallery"
-          className={`w-full h-[50vh] lg:h-[80vh] object-cover rounded-0 shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'} blur-sm brightness-75`}
+          className={`w-full h-[20vh] lg:h-[80vh] object-cover rounded-0 shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'} blur-sm brightness-75`}
         />
 
         {/* Szöveg középen */}
-        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-fancy text-6xl md:text-7xl font-bold text-center drop-shadow-lg">
+        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-fancy text-5xl lg:text-7xl font-bold text-center drop-shadow-lg">
           {texts[currentIndex]}
         </h2>
 
