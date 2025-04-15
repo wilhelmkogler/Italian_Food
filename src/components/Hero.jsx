@@ -42,7 +42,7 @@ const Hero = () => {
         <img
           src={images[currentIndex]}
           alt="Restaurant gallery"
-          className={`w-full h-[20vh] lg:h-[80vh] object-cover rounded-0 shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'} blur-sm brightness-75`}
+          className={`w-full h-[20vh] lg:h-[60vh] object-cover rounded-xl shadow-lg transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'} blur-sm brightness-75`}
         />
 
         {/* Szöveg középen */}
