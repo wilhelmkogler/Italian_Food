@@ -25,11 +25,11 @@ function Header() {
               Home
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="#menu" className="relative group">
+            <Link to="/#menu" className="relative group">
               Menu
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/contact" className="relative group">
+            <Link to="/#restaurant" className="relative group">
               Restaurant
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
             </Link>
@@ -67,10 +67,10 @@ function Header() {
             <Link to="/" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
-            <Link to="#menu" onClick={() => setMenuOpen(false)}>
+            <Link to="/#menu" onClick={() => setMenuOpen(false)}>
               Menu
             </Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            <Link to="/#restaurant" onClick={() => setMenuOpen(false)}>
               Restaurant
             </Link>
             <Link

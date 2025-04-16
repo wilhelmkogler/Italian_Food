@@ -11,15 +11,16 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const productRoutes = require("./routes/productRoutes");
-app.use("/api/products", productRoutes);
+const termekRoutes = require("./routes/termekRoutes");
+app.use("/api/termekek", termekRoutes);
+
+const rendelesRoutes = require("./routes/rendelesRoutes");
+app.use("/api/rendelesek", rendelesRoutes);
+
 
 // MongoDB connect
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => {
-    console.log("MongoDB connected");  
-  })
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("DB connection error:", err));
 
 // Start server

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Delivery from "./pages/Delivery";
+import Summary from "./pages/Summary";
 
 // Hash scroll kezelő
 const ScrollToHashElement = () => {
@@ -32,6 +33,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/delivery" element={<Delivery />} />
+        <Route path="/summary" element={<Summary />} />
+
       </Routes>
 
       <Footer />

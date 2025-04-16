@@ -1,11 +1,11 @@
-import Story from "../components/Story";
+import Browse from "../components/Browse";
 
 
 
 function Delivery() {
   return (
     <>    
-        <Story />
+        <Browse />
         
       
         

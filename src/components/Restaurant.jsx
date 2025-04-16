@@ -1,6 +1,6 @@
 function Restaurant() {
     return (
-      <section className="py-10 px-32 lg:py-10 lg:px-4 max-w-6xl mx-auto font-nicer">
+      <section id="restaurant" className="py-10 px-32 lg:py-10 lg:px-4 max-w-6xl mx-auto font-nicer">
         <h2 className="text-5xl text-white font-bold text-center mb-12">Restaurant</h2>
   
         <div className="flex flex-col lg:flex-row gap-12">

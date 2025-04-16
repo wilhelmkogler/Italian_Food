@@ -1,0 +1,26 @@
+name,price,category,description,image
+Margherita ,9.9,pizza,"Tomato sauce, mozzarella, basil",/img/tortelini.png
+Pepperoni ,11.99,pizza,"Tomato sauce, mozzarella, pepperoni",/img/tortelini.png
+Prosciutto ,12.99,pizza,"Tomato sauce, mozzarella, prosciutto",/img/tortelini.png
+Quattro Formaggi ,13.49,pizza,"Mozzarella, gorgonzola, parmesan, goat cheese",/img/tortelini.png
+Vegetarian ,10.49,pizza,"Tomato sauce, mozzarella, vegetables",/img/tortelini.png
+Diavola ,12.49,pizza,"Tomato sauce, mozzarella, spicy salami",/img/tortelini.png
+Hawaiian ,11.49,pizza,"Tomato sauce, mozzarella, ham, pineapple",/img/tortelini.png
+Tonno ,12.49,pizza,"Tomato sauce, mozzarella, tuna, onion",/img/tortelini.png
+Capricciosa ,13.49,pizza,"Tomato sauce, mozzarella, ham, mushrooms, artichokes",/img/tortelini.png
+Calzone ,12.99,pizza,"Folded pizza with ham, cheese, mushrooms",/img/tortelini.png
+Carbonara,10.99,pasta,"Pasta, eggs, pancetta, parmesan, black pepper",/img/tortelini.png
+Penne Arrabbiata,9.9,pasta,"Pasta, spicy tomato sauce, garlic, chili",/img/tortelini.png
+Tagliatelle al Pesto,11.49,pasta,"Pasta, basil pesto, parmesan",/img/tortelini.png
+Lasagna,12.99,pasta,"Layers of pasta, meat sauce, béchamel, cheese",/img/tortelini.png
+Gnocchi al Pomodoro,10.49,pasta,"Potato gnocchi, tomato sauce, basil",/img/tortelini.png
+Bolognese,11.49,pasta,"Pasta, beef ragu, tomato sauce",/img/tortelini.png
+Fettuccine Alfredo,11.99,pasta,"Pasta, butter, parmesan, cream",/img/tortelini.png
+Penne alla Vodka,10.99,pasta,"Pasta, vodka, tomato sauce, cream",/img/tortelini.png
+Ravioli Ricotta e Spinaci,12.49,pasta,Ravioli stuffed with ricotta and spinach,/img/tortelini.png
+Tortellini alla Panna,12.49,pasta,"Tortellini, cream sauce, ham",/img/tortelini.png
+Tortellini alla Anna,18.49,pasta,"Tortellini, feta cheese, garnela",/img/tortelini.png
+Black Beer,5.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
+Coffee,4.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
+Fanta,5.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
+Coca Cola,3,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
