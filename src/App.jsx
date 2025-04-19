@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 
 import Header from "./components/Header";
@@ -6,6 +11,10 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Delivery from "./pages/Delivery";
 import Summary from "./pages/Summary";
+import Admin from "./pages/Admin";
+import AdminHome from "./components/AdminHome";
+import AdminOrders from "./components/AdminOrders";
+import AdminProducts from "./components/AdminProducts";
 
 // Hash scroll kezelő
 const ScrollToHashElement = () => {
@@ -27,7 +36,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToHashElement />
-      
+
       <Header />
 
       <Routes>
@@ -35,6 +44,11 @@ export default function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/summary" element={<Summary />} />
 
+        <Route path="/admin" element={<Admin />}>
+          <Route index element={<AdminHome />} />
+          <Route path="orders" element={<AdminOrders />} />
+          <Route path="products" element={<AdminProducts />} />
+        </Route>
       </Routes>
 
       <Footer />

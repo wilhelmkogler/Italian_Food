@@ -12,9 +12,12 @@ function Header() {
         className="text-xl text-white font-nicer font-semibold flex justify-between items-center px-8 py-4 relative"
       >
         {/* LOGO */}
-        <div id="left" className="w-2/4 flex lg:justify-center">
+        <div id="left" className="w-2/4 flex lg:justify-center gap-6">
           <Link to="/" className="text-4xl ">
             ITALY
+          </Link>
+          <Link to="/admin" className="bg-red-600 p-2 hover:bg-zold">
+          A
           </Link>
         </div>
 

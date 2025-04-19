@@ -13,4 +13,14 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const rendelesek = await Rendeles.find().sort({ createdAt: -1 });
+    res.json(rendelesek);
+  } catch (err) {
+    console.error("Rendelések lekérési hiba:", err);
+    res.status(500).json({ error: "A rendelések lekérése nem sikerült." });
+  }
+});
+
 module.exports = router;

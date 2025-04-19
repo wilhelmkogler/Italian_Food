@@ -11,6 +11,7 @@ const rendelesSchema = new mongoose.Schema({
     {
       _id: String,
       name: String,
+      category: String,
       price: Number,
       quantity: Number,
     },
