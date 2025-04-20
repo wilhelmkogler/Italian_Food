@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react";
 import ProductForm from "./ProductForm";
+import Swal from "sweetalert2";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editProduct, setEditProduct] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/api/termekek")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+        const uniqueCategories = [
+          ...new Set(data.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      });
   }, []);
 
   const openModal = (product = null) => {
@@ -23,7 +32,17 @@ const AdminProducts = () => {
   };
 
   const handleDelete = async (id) => {
-    if (!confirm("Are you sure you want to delete this product?")) return;
+    const confirm = await Swal.fire({
+      title: "Are you sure?",
+      text: "This product will be permanently deleted!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#e3342f",
+      cancelButtonColor: "#6b7280",
+      confirmButtonText: "Yes, delete it!",
+    });
+
+    if (!confirm.isConfirmed) return;
 
     const res = await fetch(`http://localhost:5000/api/termekek/${id}`, {
       method: "DELETE",
@@ -31,54 +50,114 @@ const AdminProducts = () => {
 
     if (res.ok) {
       setProducts(products.filter((p) => p._id !== id));
+      Swal.fire({
+        title: "Deleted!",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+      });
     }
   };
 
   const refreshProducts = () => {
     fetch("http://localhost:5000/api/termekek")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+        const uniqueCategories = [
+          ...new Set(data.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      });
   };
 
   return (
-    <div className="p-6 text-white">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold">Products</h2>
+    <div className="px-32 py-10 lg:p-0 font-nicer text-white">
+      <h2 className="text-4xl font-bold text-center mb-6">All Products</h2>
+
+      {/* Filter gombok */}
+      <div className="mb-6 flex justify-between">
+        <div className="flex flex-wrap gap-3">
+          <button
+            onClick={() => setSelectedCategory("all")}
+            className={`px-3 py-1 rounded-lg ${
+              selectedCategory === "all"
+                ? "bg-white text-black"
+                : "bg-white/10 text-white hover:bg-white/20"
+            }`}
+          >
+            Show All
+          </button>
+
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-3 py-1 rounded-lg capitalize ${
+                selectedCategory === cat
+                  ? "bg-white text-black"
+                  : "bg-white/10 text-white hover:bg-white/20"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
         <button
           onClick={() => openModal()}
-          className="bg-green-600 px-4 py-2 rounded hover:bg-green-700"
+          className="bg-white text-black px-4 py-2 rounded transition hover:scale-105 hover:bg-zold hover:text-white"
         >
           + Add Product
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {products.map((product) => (
-          <div
-            key={product._id}
-            className="bg-white/10 p-4 rounded-xl border border-white/20"
-          >
-            <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
-            <p className="text-sm text-gray-300 mb-1">{product.description}</p>
-            <p className="text-sm">Category: {product.category}</p>
-            <p className="text-sm mb-2">Price: ${product.price}</p>
+      {/* Termékkártyák */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products
+          .filter((p) =>
+            selectedCategory === "all" ? true : p.category === selectedCategory
+          )
+          .map((product) => (
+            <div
+              key={product._id}
+              className="bg-white/10 text-white rounded-xl overflow-hidden shadow-lg flex flex-col justify-around"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-70 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+                <p className="text-sm text-gray-400 mb-2 capitalize">
+                  Category: {product.category}
+                </p>
+                <p className="text-sm text-gray-300">
+                  Description: {product.description}
+                </p>
+              </div>
+              <div className="px-4 py-2">
+                <p className="text-lg text-center font-bold text-green-400">
+                  ${product.price}
+                </p>
+              </div>
 
-            <div className="flex gap-3 mt-3">
-              <button
-                onClick={() => openModal(product)}
-                className="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDelete(product._id)}
-                className="bg-red-500 px-3 py-1 rounded hover:bg-red-600"
-              >
-                Delete
-              </button>
+              <div className="flex justify-center gap-4 my-4">
+                <button
+                  onClick={() => openModal(product)}
+                  className="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(product._id)}
+                  className="bg-red-500 px-3 py-1 rounded hover:bg-red-600"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
 
       {/* Modal */}

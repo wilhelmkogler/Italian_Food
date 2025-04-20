@@ -21,7 +21,7 @@ const AdminOrders = () => {
 
   return (
     <div className=" text-white font-fancy mx-32 my-14 lg:my-0 lg:mx-0">
-      <h2 className="text-4xl font-bold mb-6 text-center">Placed Orders</h2>
+      <h2 className="text-4xl font-bold mb-6 text-center">Received Orders</h2>
 
       {orders.length === 0 ? (
         <p>No orders found.</p>
@@ -30,7 +30,7 @@ const AdminOrders = () => {
           {orders.map((order) => (
             <div
               key={order._id}
-              className="flex justify-between gap-6 bg-lime-900 rounded-xl p-4 border border-white/20 space-y-3"
+              className="flex justify-between gap-6 bg-white/10 rounded-xl p-4 space-y-3"
             >
               <div className="flex flex-col justify-around gap-2 text-md">
                 <span>

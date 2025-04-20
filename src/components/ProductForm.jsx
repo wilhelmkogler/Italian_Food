@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const ProductForm = ({ initialData, onClose, onRefresh }) => {
   const [form, setForm] = useState(
@@ -7,6 +8,7 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
       price: "",
       category: "",
       description: "",
+      image: "", // <-- új mező
     }
   );
 
@@ -30,8 +32,19 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
     if (res.ok) {
       onRefresh();
       onClose();
+      Swal.fire({
+        title: initialData ? "Product Updated!" : "Product Added!",
+        icon: "success",
+        timer: 1500,
+        showConfirmButton: false,
+      });
     } else {
-      alert("Hiba történt a mentés során.");
+      Swal.fire({
+        title: "Error!",
+        text: "Failed to save product.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
   };
 
@@ -46,6 +59,24 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
         className="w-full px-3 py-2 border rounded"
         required
       />
+
+      <input
+        type="text"
+        name="category"
+        value={form.category}
+        onChange={handleChange}
+        placeholder="Category"
+        className="w-full px-3 py-2 border rounded"
+      />
+      <input
+        type="text"
+        name="image"
+        value={form.image}
+        onChange={handleChange}
+        placeholder="Image URL"
+        className="w-full px-3 py-2 border rounded"
+      />
+
       <input
         type="number"
         name="price"
@@ -55,14 +86,7 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
         className="w-full px-3 py-2 border rounded"
         required
       />
-      <input
-        type="text"
-        name="category"
-        value={form.category}
-        onChange={handleChange}
-        placeholder="Category"
-        className="w-full px-3 py-2 border rounded"
-      />
+
       <textarea
         name="description"
         value={form.description}
@@ -71,13 +95,14 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
         className="w-full px-3 py-2 border rounded"
         rows={3}
       ></textarea>
-
-      <button
-        type="submit"
-        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-      >
-        {initialData ? "Update" : "Add"} Product
-      </button>
+      <div className="flex justify-end">
+        <button
+          type="submit"
+          className="bg-zold text-white px-4 py-2 rounded hover:bg-green-700"
+        >
+          {initialData ? "Update" : "Add"} Product
+        </button>
+      </div>
     </form>
   );
 };
