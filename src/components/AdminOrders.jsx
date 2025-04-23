@@ -30,7 +30,7 @@ const AdminOrders = () => {
           {orders.map((order) => (
             <div
               key={order._id}
-              className="flex justify-between gap-6 bg-white/10 rounded-xl p-4 space-y-3"
+              className="flex flex-col lg:flex-row justify-between gap-6 bg-white/10 rounded-xl p-4 space-y-3"
             >
               <div className="flex flex-col justify-around gap-2 text-md">
                 <span>
@@ -57,12 +57,12 @@ const AdminOrders = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-around gap-4">
-                <div className="text-md bg-white text-black px-4 py-2 rounded-xl text-center">
+              <div className="flex flex-row lg:flex-col justify-around gap-4">
+                <div className="text-md bg-white text-black px-16 lg:px-4 py-2 rounded-xl text-center">
                   {getTimeSince(new Date(order.createdAt))}
                 </div>
                 
-                <div className="font-bold bg-zold text-white px-4 py-2 rounded-xl text-center">
+                <div className="font-bold bg-zold text-white px-16 lg:px-4 py-2 rounded-xl text-center">
                   Total: ${order.total.toFixed(2)}
                 </div>
               </div>

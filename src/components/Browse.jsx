@@ -9,8 +9,6 @@ const categoryIcons = {
   other: <Sandwich size={20} className="mr-2" />,
 };
 
-
-
 const Browse = () => {
   const [termekek, setTermekek] = useState([]);
   const [kategoria, setKategoria] = useState("all");
@@ -101,12 +99,15 @@ const Browse = () => {
             key={item._id}
             className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col"
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-6 flex flex-col h-full">
+            <div className="w-full aspect-[4/3] overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="p-6 flex flex-col h-[18vh] lg:h-[30vh]">
               <h3 className="text-2xl font-semibold mb-2">{item.name}</h3>
               <p className="text-gray-600 mb-4">{item.description}</p>
 
@@ -143,9 +144,19 @@ const Browse = () => {
 
             {/* Kosár tartalom */}
             {cart.length === 0 ? (
-              <p className="text-red-600 font-bold text-lg mt-4 text-center">
+              <div>
+
+                <p className="text-red-600 font-bold text-lg m-8 text-center">
                 The cart is empty.
               </p>
+              <button
+              onClick={() => setShowCart(false)}
+              className="w-full bg-red-500 text-white text-md rounded-xl py-4 px-6 hover:bg-red-700 transition font-bold"
+            >
+              Close
+            </button>
+              </div>
+              
             ) : (
               <>
                 {/* Vásárolt termékek */}

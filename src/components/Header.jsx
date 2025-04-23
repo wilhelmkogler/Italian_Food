@@ -9,16 +9,14 @@ function Header() {
     <div id="main" className="flex flex-col justify-stretch">
       <div
         id="navbar"
-        className="text-xl text-white font-nicer font-semibold flex justify-between items-center px-8 py-4 relative"
+        className="text-xl text-white font-nicer font-semibold flex justify-between items-center px-8 py-2 relative"
       >
         {/* LOGO */}
-        <div id="left" className="w-2/4 flex lg:justify-center gap-6">
-          <Link to="/" className="text-4xl ">
-            ITALY
+        <div id="left" className="w-2/4 flex justify-center">
+          <Link to="/">
+            <img src="img/logos.png" alt="logo" className="w-1/3" />
           </Link>
-          <Link to="/admin" className="bg-red-600 p-2 hover:bg-zold">
-          A
-          </Link>
+          
         </div>
 
         {/* NAV LINKEK nagy képernyőn */}

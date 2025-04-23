@@ -122,11 +122,15 @@ const AdminProducts = () => {
               key={product._id}
               className="bg-white/10 text-white rounded-xl overflow-hidden shadow-lg flex flex-col justify-around"
             >
-              <img
+              <div className="w-full aspect-[4/3] overflow-hidden">
+<img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-70 object-cover"
+                className="w-full h-full object-cover"
               />
+
+              </div>
+              
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                 <p className="text-sm text-gray-400 mb-2 capitalize">

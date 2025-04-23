@@ -1,26 +1,26 @@
 name,price,category,description,image
-Margherita ,9.9,pizza,"Tomato sauce, mozzarella, basil",/img/tortelini.png
-Pepperoni ,11.99,pizza,"Tomato sauce, mozzarella, pepperoni",/img/tortelini.png
-Prosciutto ,12.99,pizza,"Tomato sauce, mozzarella, prosciutto",/img/tortelini.png
-Quattro Formaggi ,13.49,pizza,"Mozzarella, gorgonzola, parmesan, goat cheese",/img/tortelini.png
-Vegetarian ,10.49,pizza,"Tomato sauce, mozzarella, vegetables",/img/tortelini.png
-Diavola ,12.49,pizza,"Tomato sauce, mozzarella, spicy salami",/img/tortelini.png
-Hawaiian ,11.49,pizza,"Tomato sauce, mozzarella, ham, pineapple",/img/tortelini.png
-Tonno ,12.49,pizza,"Tomato sauce, mozzarella, tuna, onion",/img/tortelini.png
-Capricciosa ,13.49,pizza,"Tomato sauce, mozzarella, ham, mushrooms, artichokes",/img/tortelini.png
-Calzone ,12.99,pizza,"Folded pizza with ham, cheese, mushrooms",/img/tortelini.png
-Carbonara,10.99,pasta,"Pasta, eggs, pancetta, parmesan, black pepper",/img/tortelini.png
-Penne Arrabbiata,9.9,pasta,"Pasta, spicy tomato sauce, garlic, chili",/img/tortelini.png
-Tagliatelle al Pesto,11.49,pasta,"Pasta, basil pesto, parmesan",/img/tortelini.png
-Lasagna,12.99,pasta,"Layers of pasta, meat sauce, béchamel, cheese",/img/tortelini.png
-Gnocchi al Pomodoro,10.49,pasta,"Potato gnocchi, tomato sauce, basil",/img/tortelini.png
-Bolognese,11.49,pasta,"Pasta, beef ragu, tomato sauce",/img/tortelini.png
-Fettuccine Alfredo,11.99,pasta,"Pasta, butter, parmesan, cream",/img/tortelini.png
-Penne alla Vodka,10.99,pasta,"Pasta, vodka, tomato sauce, cream",/img/tortelini.png
-Ravioli Ricotta e Spinaci,12.49,pasta,Ravioli stuffed with ricotta and spinach,/img/tortelini.png
-Tortellini alla Panna,12.49,pasta,"Tortellini, cream sauce, ham",/img/tortelini.png
-Tortellini alla Anna,18.49,pasta,"Tortellini, feta cheese, garnela",/img/tortelini.png
-Black Beer,5.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
-Coffee,4.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
-Fanta,5.9,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
-Coca Cola,3,drink,"Tortellini, feta cheese, garnela",/img/tortelini.png
+Margherita ,9.9,pizza,"Tomato sauce, mozzarella, basil",/img/pizza1.jpg
+Pepperoni ,11.9,pizza,"Tomato sauce, mozzarella, pepperoni",/img/pizza2.jpg
+Prosciutto ,12.9,pizza,"Tomato sauce, mozzarella, prosciutto",/img/pizza3.jpg
+Quattro Formaggi ,13.5,pizza,"Mozzarella, gorgonzola, parmesan, goat cheese",/img/pizza4.jpg
+Vegetarian ,10.5,pizza,"Tomato sauce, mozzarella, vegetables",/img/pizza5.jpg
+Diavola ,12.5,pizza,"Tomato sauce, mozzarella, spicy salami",/img/pizza6.jpg
+Hawaiian ,11.5,pizza,"Tomato sauce, mozzarella, ham, pineapple",/img/pizza7.jpg
+Tonno ,12.5,pizza,"Tomato sauce, mozzarella, tuna, onion",/img/pizza8.jpg
+Capricciosa ,13.5,pizza,"Tomato sauce, mozzarella, ham, mushrooms, artichokes",/img/pizza9.jpg
+Calzone ,12.9,pizza,"Folded pizza with ham, cheese, mushrooms",/img/pizza10.jpg
+Carbonara,10.9,pasta,"Pasta, eggs, pancetta, parmesan, black pepper",/img/pasta1.jpg
+Penne Arrabbiata,9.9,pasta,"Pasta, spicy tomato sauce, garlic, chili",/img/pasta2.jpg
+Tagliatelle al Pesto,11.5,pasta,"Pasta, basil pesto, parmesan",/img/pasta3.jpg
+Lasagna,12.9,pasta,"Layers of pasta, meat sauce, béchamel, cheese",/img/pasta4.jpg
+Gnocchi al Pomodoro,10.5,pasta,"Potato gnocchi, tomato sauce, basil",/img/pasta5.jpg
+Bolognese,11.9,pasta,"Pasta, beef ragu, tomato sauce",/img/pasta6.jpg
+Fettuccine Alfredo,11.9,pasta,"Pasta, butter, parmesan, cream",/img/pasta7.jpg
+Penne alla Vodka,10.9,pasta,"Pasta, vodka, tomato sauce, cream",/img/pasta8.jpg
+Ravioli Ricotta e Spinaci,12.5,pasta,Ravioli stuffed with ricotta and spinach,/img/pasta9.jpg
+Tortellini alla Anna,12.5,pasta,"Tortellini, cream sauce, ham",/img/pasta10.jpg
+Black Beer,5.9,drink,"Black, white, lemon",/img/drink5.jpg
+Coffee,4.9,drink,"Cappuccino, espresso, ice coffee",/img/drink1.jpg
+Wine,5.9,drink,"Ros�, white, red",/img/drink3.jpg
+Lemonade,7.9,drink,"Strawberry, raspberry, mango, lime",/img/drink2.jpg
+Coca Cola,4.5,drink,"Light, zero, cherry",/img/drink4.jpg

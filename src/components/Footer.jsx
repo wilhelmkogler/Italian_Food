@@ -4,14 +4,15 @@ function Footer() {
   return (
     <footer className="text-gray-300 py-4 font-nicer">
       <div className="max-w-6xl mx-auto px-32 lg:px-4 flex flex-row md:flex-row justify-between items-center gap-6">
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-5">ITALY</h3>
+        <div className="flex flex-col justify-center gap-4 lg:gap-8">
+          <img src="img/logos.png" alt="logo" className="w-1/3" />
+
           <p className="text-xs text-gray-500">
             &copy; {new Date().getFullYear()} Italy. All rights reserved.
           </p>
         </div>
 
-        <div className="flex flex-row gap-2 md:gap-16 text-sm">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 text-sm">
           <Link to="/" className="hover:text-white transition">
             Home
           </Link>
@@ -24,6 +25,12 @@ function Footer() {
           <Link to="/delivery" className="hover:text-white transition">
             Delivery
           </Link>
+
+          {/*}
+          <Link to="/admin" className="bg-red-600 p-2 hover:bg-zold">
+            A
+          </Link>
+          */}
         </div>
       </div>
     </footer>

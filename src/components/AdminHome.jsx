@@ -84,7 +84,6 @@ const AdminHome = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatBox label="Total Orders" value={orders.length} />
         <StatBox label="Total Revenue" value={`$${totalRevenue.toFixed(2)}`} />
-        
         <StatBox label="Avg. Order Value" value={`$${avgOrderValue}`} />
         <StatBox label="Top Product" value={mostPopularItem} />
       </div>

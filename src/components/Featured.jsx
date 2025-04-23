@@ -4,21 +4,21 @@ const dishes = [
     name: "Margherita",
     description:
       "Classic Italian pizza with fresh mozzarella, basil, and tomato sauce.",
-    image: "../public/img/fea1.jpg",
+    image: "../public/img/pasta5.jpg",
   },
   {
     id: 2,
     name: "Pepperoni",
     description:
       "Traditional Roman pasta with creamy sauce, pancetta, and parmesan.",
-    image: "../public/img/fea2.jpg",
+    image: "../public/img/pizza6.jpg",
   },
   {
     id: 3,
     name: "Carbonara",
     description:
       "Famous Italian dessert with coffee-soaked ladyfingers and mascarpone cream.",
-    image: "../public/img/fea3.jpg",
+    image: "../public/img/pasta10.jpg",
   },
 ];
 
