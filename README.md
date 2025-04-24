@@ -22,7 +22,7 @@
     <p>Front-End: ReactJS, Tailwind CSS, JavaScript</p>   
     <p>Back-End: NodeJS, Express</p>
     <p>Database: MongoDB</p>   
-    <h2>Popular Dishes</h2> 
+    <h2>Popular Dishes & Menu</h2> 
     <img src="public/img/git2.JPG" alt="" srcset="">    
     <p align="justify">After the hero section, where users can browse through images with overlayed texts, the most popular dishes are presented in small, eye-catching cards designed to spark users' interest – or even their appetite. <br><br> Below that, the restaurant’s full menu is displayed, allowing users to browse the available items even before arriving at the location – perfect for checking it out on the way.</p>
     <h2>Restaurant Info & Footer</h2>  
@@ -44,10 +44,10 @@
     <img src="public/img/git9.JPG" alt="" srcset="">
     <p align="justify">Naturally, the restaurant has access to an admin panel where essential operations can be monitored and managed. This includes tracking orders and viewing statistics, as well as creating, editing, and deleting products.</p>
     <h2>Dashboard</h2>
-    <img src="public/img/git10.jpg" alt="" srcset="">
+    <img src="public/img/git10.JPG" alt="" srcset="">
     <p align="justify">The admin dashboard provides access to key and insightful statistics, such as the total number of orders, overall revenue, average cart value, and the most popular food and drink items. <br><br>        In addition, a pie chart displays the ratio between card and cash payments, while a revenue-over-time chart shows daily income trends—helping identify which days are the most profitable and offering a clear overview of weekly popularity patterns.</p>
     <h2>Products</h2>
-    <img src="public/img/git11.jpg" alt="" srcset="">
+    <img src="public/img/git11.JPG" alt="" srcset="">
     <p align="justify">In the Products section, all records stored in the database are dynamically listed in a card-based layout similar to the Delivery section. A category filter is also available here, allowing users to browse items by type – such as pizzas, pastas, and drinks.</p>
     <h2>Add, Edit & Delete</h2>
     <img src="public/img/git1.png" alt="" srcset="">
@@ -56,7 +56,7 @@
     <img src="public/img/git2.png" alt="" srcset="">
     <p align="justify">If the user submits incomplete or invalid data, a SweetAlert popup appears to alert them and prompt correction. When attempting to delete an existing product from the list, an interactive confirmation dialog is also shown to ensure the action is intentional.</p>
     <h2>Orders</h2>
-    <img src="public/img/git15.jpg" alt="" srcset="">
+    <img src="public/img/git15.JPG" alt="" srcset="">
     <p align="justify">The final feature is the Received Orders, where all customer orders are displayed for the restaurant to prepare and deliver. Alongside the ordered food and drinks, the interface also shows the customer's details, the total amount to be paid, and the elapsed time since the order was placed.</p>
     <h2>Responsive Design</h2>
     <img src="public/img/git4.png" alt="" srcset="">
