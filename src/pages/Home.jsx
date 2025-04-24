@@ -1,25 +1,18 @@
-import Featured from '../components/Featured.jsx';
-import Story from '../components/Story.jsx';
-import Menu from '../components/Menu.jsx';
-import Hero from '../components/Hero.jsx';
-import Restaurant from '../components/Restaurant.jsx';
-
+import Featured from "../components/Featured.jsx";
+import Story from "../components/Story.jsx";
+import Menu from "../components/Menu.jsx";
+import Hero from "../components/Hero.jsx";
+import Restaurant from "../components/Restaurant.jsx";
 
 function Home() {
   return (
-    <>    
-        <Hero />
-        <Featured />
-        <Menu />
+    <>
+      <Hero />
+      <Featured />
+      <Menu />
 
-        
-        <Story />
-        <Restaurant />
-        
-      
-        
-    
-    
+      <Story />
+      <Restaurant />
     </>
   );
 }

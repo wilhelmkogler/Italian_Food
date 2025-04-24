@@ -63,7 +63,6 @@ const Browse = () => {
         Browse Our Menu
       </h2>
 
-      {/* Kategóriagombok */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         <button
           onClick={() => setKategoria("all")}
@@ -92,7 +91,6 @@ const Browse = () => {
         ))}
       </div>
 
-      {/* Termékkártyák */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {szurtTermekek.map((item) => (
           <div
@@ -111,7 +109,6 @@ const Browse = () => {
               <h3 className="text-2xl font-semibold mb-2">{item.name}</h3>
               <p className="text-gray-600 mb-4">{item.description}</p>
 
-              {/* Ár + gomb egy sorban */}
               <div className="mt-auto flex justify-between items-center">
                 <span className="text-lg font-semibold text-black">
                   ${item.price.toFixed(2)}
@@ -128,7 +125,6 @@ const Browse = () => {
         ))}
       </div>
 
-      {/* Kosár ikon */}
       <button
         onClick={() => setShowCart((prev) => !prev)}
         className="fixed bottom-6 right-6 bg-zold text-white rounded-full shadow-lg p-4 hover:scale-105 hover:bg-white hover:text-black transition z-50"
@@ -136,30 +132,25 @@ const Browse = () => {
         🛒 <span className="font-bold ml-1">{cart.length}</span>
       </button>
 
-      {/* Kosár panel */}
       {showCart && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
           <div className="relative w-[90%] max-w-xl bg-white rounded-2xl p-6 shadow-xl flex flex-col max-h-[90vh] overflow-y-auto">
             <h3 className="text-2xl font-bold mb-8 text-center">Your Cart</h3>
 
-            {/* Kosár tartalom */}
             {cart.length === 0 ? (
               <div>
-
                 <p className="text-red-600 font-bold text-lg m-8 text-center">
-                The cart is empty.
-              </p>
-              <button
-              onClick={() => setShowCart(false)}
-              className="w-full bg-red-500 text-white text-md rounded-xl py-4 px-6 hover:bg-red-700 transition font-bold"
-            >
-              Close
-            </button>
+                  The cart is empty.
+                </p>
+                <button
+                  onClick={() => setShowCart(false)}
+                  className="w-full bg-red-500 text-white text-md rounded-xl py-4 px-6 hover:bg-red-700 transition font-bold"
+                >
+                  Close
+                </button>
               </div>
-              
             ) : (
               <>
-                {/* Vásárolt termékek */}
                 {cart
                   .filter((item) => item.quantity > 0)
                   .map((item) => (
@@ -188,7 +179,6 @@ const Browse = () => {
                     </div>
                   ))}
 
-                {/* Nem vásárolt termékek külön */}
                 {cart.some((item) => item.quantity === 0) && (
                   <>
                     <hr className="my-4" />
@@ -206,7 +196,6 @@ const Browse = () => {
                   </>
                 )}
 
-                {/* Összegzés */}
                 <div className="mt-16">
                   <div className="flex justify-between font-medium text-black mb-2">
                     <span>Shipping:</span>
@@ -218,8 +207,6 @@ const Browse = () => {
                     <span>${(parseFloat(getTotal()) + 5).toFixed(2)}</span>
                   </div>
 
-                  {/* Checkout gomb */}
-                  {/* Bezáró gomb */}
                   <div className="flex justify-center gap-4">
                     <button
                       onClick={() => setShowCart(false)}

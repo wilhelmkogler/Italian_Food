@@ -8,7 +8,7 @@ const ProductForm = ({ initialData, onClose, onRefresh }) => {
       price: "",
       category: "",
       description: "",
-      image: "", // <-- új mező
+      image: "",
     }
   );
 

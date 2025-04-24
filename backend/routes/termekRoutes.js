@@ -3,7 +3,6 @@ const Termek = require("../models/Termek");
 
 const router = express.Router();
 
-// 🔹 GET – Minden termék lekérése
 router.get("/", async (req, res) => {
   try {
     const termekek = await Termek.find();
@@ -14,7 +13,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 🔹 POST – Új termék hozzáadása
 router.post("/", async (req, res) => {
   try {
     const ujTermek = new Termek(req.body);
@@ -26,7 +24,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-// 🔹 PUT – Termék módosítása
 router.put("/:id", async (req, res) => {
   try {
     const frissitett = await Termek.findByIdAndUpdate(req.params.id, req.body, {
@@ -39,7 +36,6 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// 🔹 DELETE – Termék törlése
 router.delete("/:id", async (req, res) => {
   try {
     await Termek.findByIdAndDelete(req.params.id);

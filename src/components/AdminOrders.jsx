@@ -51,7 +51,8 @@ const AdminOrders = () => {
                 <div className="text-md">
                   {order.items.map((item, idx) => (
                     <div className="mb-4" key={idx}>
-                      {item.name} × {item.quantity} (${item.price * item.quantity})
+                      {item.name} × {item.quantity} ($
+                      {item.price * item.quantity})
                     </div>
                   ))}
                 </div>
@@ -61,7 +62,7 @@ const AdminOrders = () => {
                 <div className="text-md bg-white text-black px-16 lg:px-4 py-2 rounded-xl text-center">
                   {getTimeSince(new Date(order.createdAt))}
                 </div>
-                
+
                 <div className="font-bold bg-zold text-white px-16 lg:px-4 py-2 rounded-xl text-center">
                   Total: ${order.total.toFixed(2)}
                 </div>

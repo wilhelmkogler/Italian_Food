@@ -84,7 +84,6 @@ const Checkout = () => {
       <h2 className="text-3xl font-bold mb-12 text-center">Checkout</h2>
 
       <div className="flex flex-col lg:flex-row gap-12">
-        {/* BAL OLDAL - VEVŐI ADATOK háttérrel */}
         <div className="relative flex-1 rounded-2xl overflow-hidden">
           <div className="absolute inset-0 bg-[url(/img/menu.png)] bg-cover bg-center blur-sm brightness-75 z-0"></div>
 
@@ -132,7 +131,6 @@ const Checkout = () => {
           </form>
         </div>
 
-        {/* JOBB OLDAL - ÖSSZEGZÉS háttérrel */}
         <div className="relative flex-1 rounded-2xl overflow-hidden">
           <div className="absolute inset-0 bg-[url(/img/menu.png)] bg-cover bg-center blur-sm brightness-75 z-0"></div>
 

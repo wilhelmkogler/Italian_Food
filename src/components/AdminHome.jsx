@@ -78,9 +78,10 @@ const AdminHome = () => {
 
   return (
     <div className="text-white font-fancy px-32 py-14 lg:p-0 space-y-6">
-      <h2 className="text-4xl text-center font-bold">Welcome to the Admin Panel</h2>
+      <h2 className="text-4xl text-center font-bold">
+        Welcome to the Admin Panel
+      </h2>
 
-      {/* Fő statisztikák */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatBox label="Total Orders" value={orders.length} />
         <StatBox label="Total Revenue" value={`$${totalRevenue.toFixed(2)}`} />
@@ -88,7 +89,6 @@ const AdminHome = () => {
         <StatBox label="Top Product" value={mostPopularItem} />
       </div>
 
-      {/* Pie Chart fizetési módok */}
       <div className="bg-white/10 p-6 rounded-xl border border-white/20 shadow mt-8">
         <h3 className="text-xl font-semibold mb-4">Payment Method Breakdown</h3>
         <ResponsiveContainer width="100%" height={300}>
@@ -103,7 +103,10 @@ const AdminHome = () => {
               label
             >
               {paymentStats.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
               ))}
             </Pie>
             <Tooltip />
@@ -112,7 +115,6 @@ const AdminHome = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Diagram napi bevételről */}
       <div className="bg-white/10 p-6 rounded-xl border border-white/20 shadow mt-8">
         <h3 className="text-xl font-semibold mb-4">Revenue by Day</h3>
         <ResponsiveContainer width="100%" height={300}>
@@ -121,7 +123,12 @@ const AdminHome = () => {
             <XAxis dataKey="date" stroke="#ccc" />
             <YAxis stroke="#ccc" />
             <Tooltip />
-            <Line type="monotone" dataKey="total" stroke="#22c55e" strokeWidth={2} />
+            <Line
+              type="monotone"
+              dataKey="total"
+              stroke="#22c55e"
+              strokeWidth={2}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>

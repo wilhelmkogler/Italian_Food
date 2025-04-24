@@ -25,12 +25,6 @@ function Footer() {
           <Link to="/delivery" className="hover:text-white transition">
             Delivery
           </Link>
-
-          {/*}
-          <Link to="/admin" className="bg-red-600 p-2 hover:bg-zold">
-            A
-          </Link>
-          */}
         </div>
       </div>
     </footer>

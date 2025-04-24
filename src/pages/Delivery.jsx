@@ -1,16 +1,9 @@
 import Browse from "../components/Browse";
 
-
-
 function Delivery() {
   return (
-    <>    
-        <Browse />
-        
-      
-        
-    
-    
+    <>
+      <Browse />
     </>
   );
 }

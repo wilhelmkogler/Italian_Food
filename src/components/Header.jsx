@@ -11,15 +11,12 @@ function Header() {
         id="navbar"
         className="text-xl text-white font-nicer font-semibold flex justify-between items-center px-8 py-2 relative"
       >
-        {/* LOGO */}
         <div id="left" className="w-2/4 flex justify-center">
           <Link to="/">
             <img src="img/logos.png" alt="logo" className="w-1/3" />
           </Link>
-          
         </div>
 
-        {/* NAV LINKEK nagy képernyőn */}
         <div className="hidden lg:flex w-2/4 justify-center">
           <div className="flex items-center gap-8">
             <Link to="/" className="relative group">
@@ -43,21 +40,18 @@ function Header() {
           </div>
         </div>
 
-        {/* Hamburger icon mobilon */}
         <div className="lg:hidden w-2/4 flex justify-end">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={2} /> : <Menu size={42} />}
           </button>
         </div>
 
-        {/* Slide in Menu mobilon */}
         <div
           className={`fixed top-0 right-0 h-[300px] w-[300px] rounded-xl z-50 transform transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="bg-orange-950 border-4 rounded-3xl flex flex-col items-center justify-center h-full gap-8 p-8 text-lg relative">
-            {/* Bezáró X ikon belül, jobb felső sarokban */}
             <button
               onClick={() => setMenuOpen(false)}
               className="absolute top-4 right-4"

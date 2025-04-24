@@ -35,7 +35,6 @@ function Featured() {
             key={dish.id}
             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 w-[100%]"
           >
-            {/* Fix aspect ratio  */}
             <div className="relative pt-[75%]">
               <img
                 src={dish.image}
@@ -45,8 +44,12 @@ function Featured() {
             </div>
 
             <div className="p-4 lg:p-6">
-              <h3 className="text-md lg:text-2xl font-semibold mb-3">{dish.name}</h3>
-              <p className="text-gray-600 text-xs lg:text-sm">{dish.description}</p>
+              <h3 className="text-md lg:text-2xl font-semibold mb-3">
+                {dish.name}
+              </h3>
+              <p className="text-gray-600 text-xs lg:text-sm">
+                {dish.description}
+              </p>
             </div>
           </div>
         ))}

@@ -75,7 +75,6 @@ const AdminProducts = () => {
     <div className="px-32 py-10 lg:p-0 font-fancy text-white">
       <h2 className="text-4xl font-bold text-center mb-6">All Products</h2>
 
-      {/* Filter gombok */}
       <div className="mb-6 flex justify-between">
         <div className="flex flex-wrap gap-3">
           <button
@@ -111,7 +110,6 @@ const AdminProducts = () => {
         </button>
       </div>
 
-      {/* Termékkártyák */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {products
           .filter((p) =>
@@ -123,14 +121,13 @@ const AdminProducts = () => {
               className="bg-white/10 text-white rounded-xl overflow-hidden shadow-lg flex flex-col justify-around"
             >
               <div className="w-full aspect-[4/3] overflow-hidden">
-<img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              
+
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                 <p className="text-sm text-gray-400 mb-2 capitalize">
@@ -164,7 +161,6 @@ const AdminProducts = () => {
           ))}
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
           <div className="bg-white text-black rounded-xl p-6 w-[90%] max-w-lg relative">

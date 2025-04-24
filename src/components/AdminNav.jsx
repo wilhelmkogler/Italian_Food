@@ -12,7 +12,6 @@ const AdminNav = () => {
 
   return (
     <nav className="px-4">
-
       <div className="flex flex-row lg:flex-col justify-center gap-4">
         <Link to="/admin" className={linkClass("/admin")}>
           Dashboard

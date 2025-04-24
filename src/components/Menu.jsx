@@ -95,22 +95,24 @@ const drinks = [
     price: "$9.99",
     ingredients: "Strawberry, mango, kiwi",
   },
-
 ];
 
 const Menu = () => {
   return (
-    <section id="menu" className="px-32 py-10 lg:py-16 lg:px-4 max-w-6xl mx-auto font-nicer">
+    <section
+      id="menu"
+      className="px-32 py-10 lg:py-16 lg:px-4 max-w-6xl mx-auto font-nicer"
+    >
       <h2 className="text-5xl font-bold text-white text-center mb-12">Menu</h2>
 
       <div className="relative border-2 border-white rounded-3xl overflow-hidden">
-        {/* Háttérkép blur-ral */}
         <div className="absolute inset-0 bg-[url(/img/menu.png)] bg-cover bg-center blur-md brightness-75"></div>
 
-        {/* Tartalom */}
         <div className="relative p-10 flex flex-col lg:flex-row lg:justify-around gap-0 lg:gap-16">
           <div>
-            <h3 className="text-3xl font-semibold text-white underline mb-10">Pizza</h3>
+            <h3 className="text-3xl font-semibold text-white underline mb-10">
+              Pizza
+            </h3>
             {pizzas.map((item, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between font-semibold text-md">
@@ -123,7 +125,9 @@ const Menu = () => {
           </div>
 
           <div>
-            <h3 className="text-3xl font-semibold text-white underline mt-10 mb-10 lg:mt-0">Pasta</h3>
+            <h3 className="text-3xl font-semibold text-white underline mt-10 mb-10 lg:mt-0">
+              Pasta
+            </h3>
             {pastas.map((item, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between font-semibold text-md">
@@ -133,7 +137,9 @@ const Menu = () => {
                 <p className="text-white">{item.ingredients}</p>
               </div>
             ))}
-            <h3 className="text-3xl font-semibold text-white underline my-10">Drinks</h3>
+            <h3 className="text-3xl font-semibold text-white underline my-10">
+              Drinks
+            </h3>
             {drinks.map((item, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between font-semibold text-md">

@@ -16,7 +16,6 @@ import AdminHome from "./components/AdminHome";
 import AdminOrders from "./components/AdminOrders";
 import AdminProducts from "./components/AdminProducts";
 
-// Hash scroll kezelő
 const ScrollToHashElement = () => {
   const location = useLocation();
 

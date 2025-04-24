@@ -1,16 +1,9 @@
 import Checkout from "../components/Checkout";
 
-
-
 function Summary() {
   return (
-    <>    
-        <Checkout />
-        
-      
-        
-    
-    
+    <>
+      <Checkout />
     </>
   );
 }
