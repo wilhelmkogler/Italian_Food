@@ -72,7 +72,7 @@ const AdminProducts = () => {
   };
 
   return (
-    <div className="px-32 py-10 lg:p-0 font-nicer text-white">
+    <div className="px-32 py-10 lg:p-0 font-fancy text-white">
       <h2 className="text-4xl font-bold text-center mb-6">All Products</h2>
 
       {/* Filter gombok */}

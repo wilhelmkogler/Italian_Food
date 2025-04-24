@@ -2,9 +2,9 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/img/pasta8.jpg",
-  "/img/pizza1.jpg",
   "/img/pasta2.jpg",
+  "/img/pizza1.jpg",
+  "/img/pasta8.jpg",
 ];
 
 const texts = [

@@ -77,14 +77,14 @@ const AdminHome = () => {
   const COLORS = ["#22c55e", "#3b82f6"];
 
   return (
-    <div className="text-white px-32 py-14 lg:p-0 space-y-6">
+    <div className="text-white font-fancy px-32 py-14 lg:p-0 space-y-6">
       <h2 className="text-4xl text-center font-bold">Welcome to the Admin Panel</h2>
 
       {/* Fő statisztikák */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatBox label="Total Orders" value={orders.length} />
         <StatBox label="Total Revenue" value={`$${totalRevenue.toFixed(2)}`} />
-        <StatBox label="Avg. Order Value" value={`$${avgOrderValue}`} />
+        <StatBox label="Avg. Value" value={`$${avgOrderValue}`} />
         <StatBox label="Top Product" value={mostPopularItem} />
       </div>
 
